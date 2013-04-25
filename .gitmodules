@@ -1,0 +1,12 @@
+[submodule "Vendor/XMPPFramework"]
+	path = Vendor/XMPPFramework
+	url = git@github.com:appsocially/XMPPFramework.git
+[submodule "Vendor/AppSocially"]
+	path = Vendor/AppSocially
+	url = git@github.com:appsocially/appsocially-ios-sdk.git
+[submodule "Vendor/Facebook"]
+	path = Vendor/Facebook
+	url = git@github.com:facebook/facebook-ios-sdk.git
+[submodule "Vendor/SVProgressHUD"]
+	path = Vendor/SVProgressHUD
+	url = git@github.com:samvermette/SVProgressHUD.git
