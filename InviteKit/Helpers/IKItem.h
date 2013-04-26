@@ -12,4 +12,6 @@
 
 @property (nonatomic, copy) NSDictionary *properties;
 
++ (id)itemWithProperties:(NSDictionary *)properties;
+
 @end

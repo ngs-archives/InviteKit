@@ -24,12 +24,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IKConfiguration.h"
+#import "IKFacebookMessageInviter.h"
+#import "IKItem.h"
+#import "AppSocially.h"
 
-@class AppSocially;
+extern NSString * const IKSendDidStartNotification;
+extern NSString * const IKSendDidFinishNotification;
+extern NSString * const IKSendDidFailWithErrorNotification;
+extern NSString * const IKSendDidCancelNotification;
+extern NSString * const IKAuthDidFinishNotification;
+
 @interface InviteKit : NSObject
 
 + (AppSocially *)appsocially;
 + (NSString *)libraryBundlePath;
+
++ (BOOL)handleOpenURL:(NSURL *)url;
++ (void)handleDidBecomeActive;
++ (void)handleWillTerminate;
 
 @end
 

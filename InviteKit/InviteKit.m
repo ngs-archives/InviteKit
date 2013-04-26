@@ -27,6 +27,12 @@
 #import "IKConfiguration.h"
 #import "AppSocially.h"
 
+NSString * const IKSendDidStartNotification         = @"IKSendDidStartNotification";
+NSString * const IKSendDidFinishNotification        = @"IKSendDidFinish";
+NSString * const IKSendDidFailWithErrorNotification = @"IKSendDidFailWithError";
+NSString * const IKSendDidCancelNotification        = @"IKSendDidCancel";
+NSString * const IKAuthDidFinishNotification        = @"IKAuthDidFinish";
+
 @implementation InviteKit
 
 
@@ -46,6 +52,19 @@ static NSString *libraryBundlePath = nil;
 }
 
 
++ (BOOL)handleOpenURL:(NSURL *)url {
+  return [IKFacebookMessageInviter handleOpenURL:url];
+}
+
++ (void)handleDidBecomeActive {
+  [IKFacebookMessageInviter handleDidBecomeActive];
+}
+
++ (void)handleWillTerminate {
+  [IKFacebookMessageInviter handleWillTerminate];
+}
+
+
 @end
 
 
@@ -57,11 +76,12 @@ NSString* IKLocalizedStringFormat(NSString* key) {
     if ([IKCONFIG(isUsingCocoaPods) boolValue]) {
       path = [InviteKit libraryBundlePath];
     } else {
-      path = [[InviteKit libraryBundlePath] stringByAppendingPathComponent:@"ShareKit.bundle"];
+      path = [[InviteKit libraryBundlePath] stringByAppendingPathComponent:@"InviteKit.bundle"];
     }
     
     bundle = [NSBundle bundleWithPath:path];
-    NSCAssert(bundle != nil,@"ShareKit has been refactored to be used as Xcode subproject. Please follow the updated installation wiki and re-add it to the project. Please do not forget to clean project and clean build folder afterwards. In case you use CocoaPods override - (NSNumber *)isUsingCocoaPods; method in your configurator subclass and return [NSNumber numberWithBool:YES]");
+    NSString *msg = [NSString stringWithFormat:@"bundle not found at %@", path];
+    NSCAssert(bundle != nil, msg);
   }
   return [bundle localizedStringForKey:key value:key table:nil];
 }
@@ -77,3 +97,5 @@ NSString* IKLocalizedString(NSString* key, ...) {
 	
 	return string;
 }
+
+

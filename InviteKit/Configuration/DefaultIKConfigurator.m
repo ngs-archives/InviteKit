@@ -35,14 +35,18 @@
   return nil;
 }
 
+- (NSString *)facebookLocalAppId {
+  return nil;
+}
+
 //Change if your app needs some special Facebook permissions only. In most cases you can leave it as it is.
 
 // new with the 3.1 SDK facebook wants you to request read and publish permissions separatly. If you don't
 // you won't get a smooth login/auth flow. Since InviteKit does not require any read permissions.
-- (NSArray*)facebookWritePermissions {
+- (NSArray *)facebookWritePermissions {
   return @[@"publish_actions", @"xmpp_login"];
 }
-- (NSArray*)facebookReadPermissions {
+- (NSArray *)facebookReadPermissions {
   return nil;	// this is the defaul value for the SDK and will afford basic read permissions
 }
 

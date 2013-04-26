@@ -19,9 +19,14 @@ The one-stop framework for integrating *INVITE A FRIEND* function in your app.
 * QuartzCore framework
 
 
-## Configuration
+## Build Configuration
 
     HEADER_SEARCH_PATHS = $(SDKROOT)/usr/include/libxml2:$(BUILT_PRODUCTS_DIR)/facebook-ios-sdk
+
+## App Configuration
+
+Copy `Examples/DemoApp/InviteDemoAppConfigurator.sample.m` to `Examples/DemoApp/InviteDemoAppConfigurator.m` and replace placeholders to yours.
+
 
 ## Prefix Header
 

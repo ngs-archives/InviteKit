@@ -29,6 +29,9 @@
 
 - (NSString *)appSociallyToken;
 - (NSString *)facebookAppId;
+- (NSString *)facebookLocalAppId;
+- (NSArray *)facebookWritePermissions;
+- (NSArray *)facebookReadPermissions;
 - (NSNumber *)isUsingCocoaPods;
 
 @end

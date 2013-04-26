@@ -10,4 +10,10 @@
 
 @implementation IKItem
 
++ (id)itemWithProperties:(NSDictionary *)properties {
+  IKItem *item = [[self alloc] init];
+  item.properties = properties;
+  return item;
+}
+
 @end
