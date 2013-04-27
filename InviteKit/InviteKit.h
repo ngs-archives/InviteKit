@@ -27,7 +27,7 @@
 #import "IKConfiguration.h"
 #import "IKFacebookMessageInviter.h"
 #import "IKItem.h"
-#import "AppSocially.h"
+#import <AppSociallySDK/AppSociallySDK.h>
 
 extern NSString * const IKSendDidStartNotification;
 extern NSString * const IKSendDidFinishNotification;

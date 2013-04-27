@@ -9,7 +9,7 @@
 #import "IKInviter.h"
 #import "IKInviterPrivate.h"
 #import "InviteKit.h"
-#import "AppSociallySDK.h"
+#import <AppSociallySDK/AppSociallySDK.h>
 #import "SVProgressHUD.h"
 
 static NSString *const kIKStoredItemKey = @"kIKStoredItem";

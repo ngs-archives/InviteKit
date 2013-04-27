@@ -25,7 +25,7 @@
 
 #import "InviteKit.h"
 #import "IKConfiguration.h"
-#import "AppSocially.h"
+#import <AppSociallySDK/AppSociallySDK.h>
 
 NSString * const IKSendDidStartNotification         = @"IKSendDidStartNotification";
 NSString * const IKSendDidFinishNotification        = @"IKSendDidFinish";

@@ -32,6 +32,7 @@
 - (NSString *)facebookLocalAppId;
 - (NSArray *)facebookWritePermissions;
 - (NSArray *)facebookReadPermissions;
+- (NSString *)inviteTemplateName;
 - (NSNumber *)isUsingCocoaPods;
 
 @end

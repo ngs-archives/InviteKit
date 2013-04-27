@@ -49,23 +49,6 @@
 		8515DDA2172A225700C84CF2 /* XMPPRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4420D17288A5100D584DA /* XMPPRoom.m */; };
 		8515DDA3172A225700C84CF2 /* TURNSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4423217288A5100D584DA /* TURNSocket.m */; };
 		8515DDA4172A226A00C84CF2 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B447B51728B93A00D584DA /* SVProgressHUD.m */; };
-		8515DDA5172A226A00C84CF2 /* ASAFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4461017289C4300D584DA /* ASAFHTTPClient.m */; };
-		8515DDA6172A226A00C84CF2 /* ASAFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4461217289C4300D584DA /* ASAFHTTPRequestOperation.m */; };
-		8515DDA7172A226A00C84CF2 /* ASAFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4461417289C4300D584DA /* ASAFImageRequestOperation.m */; };
-		8515DDA8172A226A00C84CF2 /* ASAFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4461617289C4300D584DA /* ASAFJSONRequestOperation.m */; };
-		8515DDA9172A226A00C84CF2 /* ASAFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4461817289C4300D584DA /* ASAFNetworkActivityIndicatorManager.m */; };
-		8515DDAA172A226A00C84CF2 /* ASAFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4461A17289C4300D584DA /* ASAFPropertyListRequestOperation.m */; };
-		8515DDAB172A226A00C84CF2 /* ASAFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4461C17289C4300D584DA /* ASAFURLConnectionOperation.m */; };
-		8515DDAC172A226A00C84CF2 /* ASAFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4461E17289C4300D584DA /* ASAFXMLRequestOperation.m */; };
-		8515DDAD172A226A00C84CF2 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4462017289C4300D584DA /* UIImageView+AFNetworking.m */; };
-		8515DDAE172A226A00C84CF2 /* AppSocially.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4462217289C4300D584DA /* AppSocially.m */; };
-		8515DDAF172A226A00C84CF2 /* ASAFAppSociallyAPIRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4462617289C4300D584DA /* ASAFAppSociallyAPIRequestOperation.m */; };
-		8515DDB0172A226A00C84CF2 /* ASAFAppSociallyAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4462817289C4300D584DA /* ASAFAppSociallyAPIResponse.m */; };
-		8515DDB1172A226A00C84CF2 /* ASError.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4462A17289C4300D584DA /* ASError.m */; };
-		8515DDB2172A226A00C84CF2 /* ASGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4462C17289C4300D584DA /* ASGlobal.m */; };
-		8515DDB3172A226A00C84CF2 /* ASObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4462E17289C4300D584DA /* ASObject.m */; };
-		8515DDB4172A226A00C84CF2 /* ASPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4463017289C4300D584DA /* ASPage.m */; };
-		8515DDB5172A226A00C84CF2 /* ASUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4463217289C4300D584DA /* ASUser.m */; };
 		8515DDB6172A226A00C84CF2 /* XMPPAnonymousAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4419017288A5100D584DA /* XMPPAnonymousAuthentication.m */; };
 		8515DDB7172A226A00C84CF2 /* XMPPDeprecatedDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4419317288A5100D584DA /* XMPPDeprecatedDigestAuthentication.m */; };
 		8515DDB8172A226A00C84CF2 /* XMPPDeprecatedPlainAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4419617288A5100D584DA /* XMPPDeprecatedPlainAuthentication.m */; };
@@ -155,12 +138,10 @@
 		8515DE0E172A235F00C84CF2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8515DD50172A16D300C84CF2 /* CoreFoundation.framework */; };
 		8552A7E2172A243B00581FA7 /* InviteKitDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B445E11728906900D584DA /* InviteKitDemoAppDelegate.m */; };
 		8552A7E3172A24DE00581FA7 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B442A217288A5100D584DA /* libidn.a */; };
-		8552A7E5172A2B4F00581FA7 /* InviteKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8552A7E4172A2B4F00581FA7 /* InviteKit.bundle */; };
 		8552A7E6172A2B4F00581FA7 /* InviteKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8552A7E4172A2B4F00581FA7 /* InviteKit.bundle */; };
 		85B4416317288A2800D584DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416217288A2800D584DA /* UIKit.framework */; };
 		85B4416517288A2800D584DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416417288A2800D584DA /* Foundation.framework */; };
 		85B4416717288A2800D584DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416617288A2800D584DA /* CoreGraphics.framework */; };
-		85B444C917288A5400D584DA /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B442A217288A5100D584DA /* libidn.a */; };
 		85B445C117288AA400D584DA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C017288AA400D584DA /* libxml2.dylib */; };
 		85B445C317288ADF00D584DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C217288ADF00D584DA /* Security.framework */; };
 		85B445C717288CB800D584DA /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C617288CB800D584DA /* libresolv.dylib */; };
@@ -183,6 +164,9 @@
 		85B447B11728B7DD00D584DA /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85B447B01728B7DC00D584DA /* FacebookSDKResources.bundle */; };
 		85B447B61728B93A00D584DA /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85B447B31728B93A00D584DA /* SVProgressHUD.bundle */; };
 		85B447BD1728BC1100D584DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447BC1728BC1100D584DA /* QuartzCore.framework */; };
+		85F4D229172B400600D7EEC4 /* libAppSociallySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F4D224172B3FF000D7EEC4 /* libAppSociallySDK.a */; };
+		85F4D232172B44B200D7EEC4 /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F4D231172B44B200D7EEC4 /* libiconv.2.dylib */; };
+		85F4D237172B45E900D7EEC4 /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F4D231172B44B200D7EEC4 /* libiconv.2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +212,27 @@
 			remoteGlobalIDString = 85A44B9F16A8CE05007BE80E;
 			remoteInfo = FacebookSDKIntegrationTests;
 		};
+		85F4D223172B3FF000D7EEC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85F4D21D172B3FEE00D7EEC4 /* AppSociallySDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 85BA1BEF169AA9BA00A6E848;
+			remoteInfo = AppSociallySDK;
+		};
+		85F4D225172B3FF000D7EEC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85F4D21D172B3FEE00D7EEC4 /* AppSociallySDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 85BA1C00169AA9BA00A6E848;
+			remoteInfo = AppSociallySDKTests;
+		};
+		85F4D227172B3FFE00D7EEC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85F4D21D172B3FEE00D7EEC4 /* AppSociallySDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 85BA1BEE169AA9BA00A6E848;
+			remoteInfo = AppSociallySDK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -254,7 +259,7 @@
 		8515DD6D172A1EDB00C84CF2 /* InviteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteKit.h; sourceTree = "<group>"; };
 		8515DD6F172A1EDB00C84CF2 /* InviteKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteKit.m; sourceTree = "<group>"; };
 		8552A7E4172A2B4F00581FA7 /* InviteKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InviteKit.bundle; sourceTree = "<group>"; };
-		85B4415F17288A2800D584DA /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B4415F17288A2800D584DA /* IKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B4416217288A2800D584DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		85B4416417288A2800D584DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		85B4416617288A2800D584DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -505,43 +510,6 @@
 		85B4460717289B2900D584DA /* IKInviter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKInviter.m; sourceTree = "<group>"; };
 		85B4460917289B3C00D584DA /* IKXMPPInviter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKXMPPInviter.h; sourceTree = "<group>"; };
 		85B4460A17289B3C00D584DA /* IKXMPPInviter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKXMPPInviter.m; sourceTree = "<group>"; };
-		85B4460E17289C4300D584DA /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		85B4460F17289C4300D584DA /* ASAFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFHTTPClient.h; sourceTree = "<group>"; };
-		85B4461017289C4300D584DA /* ASAFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFHTTPClient.m; sourceTree = "<group>"; };
-		85B4461117289C4300D584DA /* ASAFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		85B4461217289C4300D584DA /* ASAFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		85B4461317289C4300D584DA /* ASAFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFImageRequestOperation.h; sourceTree = "<group>"; };
-		85B4461417289C4300D584DA /* ASAFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFImageRequestOperation.m; sourceTree = "<group>"; };
-		85B4461517289C4300D584DA /* ASAFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFJSONRequestOperation.h; sourceTree = "<group>"; };
-		85B4461617289C4300D584DA /* ASAFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFJSONRequestOperation.m; sourceTree = "<group>"; };
-		85B4461717289C4300D584DA /* ASAFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		85B4461817289C4300D584DA /* ASAFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		85B4461917289C4300D584DA /* ASAFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFPropertyListRequestOperation.h; sourceTree = "<group>"; };
-		85B4461A17289C4300D584DA /* ASAFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFPropertyListRequestOperation.m; sourceTree = "<group>"; };
-		85B4461B17289C4300D584DA /* ASAFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFURLConnectionOperation.h; sourceTree = "<group>"; };
-		85B4461C17289C4300D584DA /* ASAFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFURLConnectionOperation.m; sourceTree = "<group>"; };
-		85B4461D17289C4300D584DA /* ASAFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFXMLRequestOperation.h; sourceTree = "<group>"; };
-		85B4461E17289C4300D584DA /* ASAFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFXMLRequestOperation.m; sourceTree = "<group>"; };
-		85B4461F17289C4300D584DA /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		85B4462017289C4300D584DA /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		85B4462117289C4300D584DA /* AppSocially.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSocially.h; sourceTree = "<group>"; };
-		85B4462217289C4300D584DA /* AppSocially.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSocially.m; sourceTree = "<group>"; };
-		85B4462317289C4300D584DA /* AppSociallySDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppSociallySDK-Prefix.pch"; sourceTree = "<group>"; };
-		85B4462417289C4300D584DA /* AppSociallySDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSociallySDK.h; sourceTree = "<group>"; };
-		85B4462517289C4300D584DA /* ASAFAppSociallyAPIRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFAppSociallyAPIRequestOperation.h; sourceTree = "<group>"; };
-		85B4462617289C4300D584DA /* ASAFAppSociallyAPIRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFAppSociallyAPIRequestOperation.m; sourceTree = "<group>"; };
-		85B4462717289C4300D584DA /* ASAFAppSociallyAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAFAppSociallyAPIResponse.h; sourceTree = "<group>"; };
-		85B4462817289C4300D584DA /* ASAFAppSociallyAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAFAppSociallyAPIResponse.m; sourceTree = "<group>"; };
-		85B4462917289C4300D584DA /* ASError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASError.h; sourceTree = "<group>"; };
-		85B4462A17289C4300D584DA /* ASError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASError.m; sourceTree = "<group>"; };
-		85B4462B17289C4300D584DA /* ASGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASGlobal.h; sourceTree = "<group>"; };
-		85B4462C17289C4300D584DA /* ASGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASGlobal.m; sourceTree = "<group>"; };
-		85B4462D17289C4300D584DA /* ASObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASObject.h; sourceTree = "<group>"; };
-		85B4462E17289C4300D584DA /* ASObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASObject.m; sourceTree = "<group>"; };
-		85B4462F17289C4300D584DA /* ASPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPage.h; sourceTree = "<group>"; };
-		85B4463017289C4300D584DA /* ASPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPage.m; sourceTree = "<group>"; };
-		85B4463117289C4300D584DA /* ASUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASUser.h; sourceTree = "<group>"; };
-		85B4463217289C4300D584DA /* ASUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASUser.m; sourceTree = "<group>"; };
 		85B446451728A15100D584DA /* IKItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKItem.h; sourceTree = "<group>"; };
 		85B446461728A15200D584DA /* IKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKItem.m; sourceTree = "<group>"; };
 		85B4464C1728A42D00D584DA /* IKFacebookMessageInviter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKFacebookMessageInviter.h; sourceTree = "<group>"; };
@@ -563,6 +531,8 @@
 		85B447B51728B93A00D584DA /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		85B447BC1728BC1100D584DA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		85B447BE1728BCEB00D584DA /* IKInviterPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKInviterPrivate.h; sourceTree = "<group>"; };
+		85F4D21D172B3FEE00D7EEC4 /* AppSociallySDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppSociallySDK.xcodeproj; path = Vendor/AppSocially/AppSociallySDK.xcodeproj; sourceTree = SOURCE_ROOT; };
+		85F4D231172B44B200D7EEC4 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libiconv.2.dylib; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -577,6 +547,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F4D232172B44B200D7EEC4 /* libiconv.2.dylib in Frameworks */,
+				85F4D229172B400600D7EEC4 /* libAppSociallySDK.a in Frameworks */,
 				8515DD74172A1F1400C84CF2 /* libfacebook_ios_sdk.a in Frameworks */,
 				8515DE01172A233F00C84CF2 /* libxml2.dylib in Frameworks */,
 				8515DE07172A234D00C84CF2 /* CoreLocation.framework in Frameworks */,
@@ -603,6 +575,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F4D237172B45E900D7EEC4 /* libiconv.2.dylib in Frameworks */,
 				8515DDFE172A229700C84CF2 /* libInviteKit.a in Frameworks */,
 				85B447BD1728BC1100D584DA /* QuartzCore.framework in Frameworks */,
 				85B447AD1728B65800D584DA /* AdSupport.framework in Frameworks */,
@@ -620,18 +593,18 @@
 				85B4416317288A2800D584DA /* UIKit.framework in Frameworks */,
 				85B4416517288A2800D584DA /* Foundation.framework in Frameworks */,
 				85B4416717288A2800D584DA /* CoreGraphics.framework in Frameworks */,
-				85B444C917288A5400D584DA /* libidn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8515DD52172A16D300C84CF2 /* InviteKitLibraryResources */ = {
+		8515DD52172A16D300C84CF2 /* Resource Bundle */ = {
 			isa = PBXGroup;
 			children = (
 				8515DD54172A16D300C84CF2 /* InviteKitLibraryResources-Info.plist */,
 			);
+			name = "Resource Bundle";
 			path = InviteKitLibraryResources;
 			sourceTree = "<group>";
 		};
@@ -648,7 +621,7 @@
 			children = (
 				85B445D31728906900D584DA /* Examples */,
 				85B445F21728908200D584DA /* InviteKit */,
-				8515DD52172A16D300C84CF2 /* InviteKitLibraryResources */,
+				8515DD52172A16D300C84CF2 /* Resource Bundle */,
 				85B4416117288A2800D584DA /* Frameworks */,
 				85B4416017288A2800D584DA /* Products */,
 				85B445BF17288A5A00D584DA /* Vendor */,
@@ -658,7 +631,7 @@
 		85B4416017288A2800D584DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85B4415F17288A2800D584DA /* DemoApp.app */,
+				85B4415F17288A2800D584DA /* IKDemo.app */,
 				8515DD4F172A16D300C84CF2 /* InviteKit.bundle */,
 				8515DD68172A1EDB00C84CF2 /* libInviteKit.a */,
 			);
@@ -668,6 +641,7 @@
 		85B4416117288A2800D584DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85F4D231172B44B200D7EEC4 /* libiconv.2.dylib */,
 				85B445C617288CB800D584DA /* libresolv.dylib */,
 				85B447A61728B5FB00D584DA /* libsqlite3.dylib */,
 				85B445C017288AA400D584DA /* libxml2.dylib */,
@@ -1313,9 +1287,9 @@
 		85B445BF17288A5A00D584DA /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				85F4D21D172B3FEE00D7EEC4 /* AppSociallySDK.xcodeproj */,
 				85B447B21728B93A00D584DA /* SVProgressHUD */,
 				85B4478B1728B20E00D584DA /* facebook-ios-sdk.xcodeproj */,
-				85B4460C17289C4300D584DA /* AppSocially */,
 				85B4418917288A5100D584DA /* XMPPFramework */,
 			);
 			name = Vendor;
@@ -1416,59 +1390,6 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		85B4460C17289C4300D584DA /* AppSocially */ = {
-			isa = PBXGroup;
-			children = (
-				85B4460D17289C4300D584DA /* AFNetworking */,
-				85B4462117289C4300D584DA /* AppSocially.h */,
-				85B4462217289C4300D584DA /* AppSocially.m */,
-				85B4462317289C4300D584DA /* AppSociallySDK-Prefix.pch */,
-				85B4462417289C4300D584DA /* AppSociallySDK.h */,
-				85B4462517289C4300D584DA /* ASAFAppSociallyAPIRequestOperation.h */,
-				85B4462617289C4300D584DA /* ASAFAppSociallyAPIRequestOperation.m */,
-				85B4462717289C4300D584DA /* ASAFAppSociallyAPIResponse.h */,
-				85B4462817289C4300D584DA /* ASAFAppSociallyAPIResponse.m */,
-				85B4462917289C4300D584DA /* ASError.h */,
-				85B4462A17289C4300D584DA /* ASError.m */,
-				85B4462B17289C4300D584DA /* ASGlobal.h */,
-				85B4462C17289C4300D584DA /* ASGlobal.m */,
-				85B4462D17289C4300D584DA /* ASObject.h */,
-				85B4462E17289C4300D584DA /* ASObject.m */,
-				85B4462F17289C4300D584DA /* ASPage.h */,
-				85B4463017289C4300D584DA /* ASPage.m */,
-				85B4463117289C4300D584DA /* ASUser.h */,
-				85B4463217289C4300D584DA /* ASUser.m */,
-			);
-			name = AppSocially;
-			path = Vendor/AppSocially/AppSociallySDK;
-			sourceTree = SOURCE_ROOT;
-		};
-		85B4460D17289C4300D584DA /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				85B4460E17289C4300D584DA /* AFNetworking.h */,
-				85B4460F17289C4300D584DA /* ASAFHTTPClient.h */,
-				85B4461017289C4300D584DA /* ASAFHTTPClient.m */,
-				85B4461117289C4300D584DA /* ASAFHTTPRequestOperation.h */,
-				85B4461217289C4300D584DA /* ASAFHTTPRequestOperation.m */,
-				85B4461317289C4300D584DA /* ASAFImageRequestOperation.h */,
-				85B4461417289C4300D584DA /* ASAFImageRequestOperation.m */,
-				85B4461517289C4300D584DA /* ASAFJSONRequestOperation.h */,
-				85B4461617289C4300D584DA /* ASAFJSONRequestOperation.m */,
-				85B4461717289C4300D584DA /* ASAFNetworkActivityIndicatorManager.h */,
-				85B4461817289C4300D584DA /* ASAFNetworkActivityIndicatorManager.m */,
-				85B4461917289C4300D584DA /* ASAFPropertyListRequestOperation.h */,
-				85B4461A17289C4300D584DA /* ASAFPropertyListRequestOperation.m */,
-				85B4461B17289C4300D584DA /* ASAFURLConnectionOperation.h */,
-				85B4461C17289C4300D584DA /* ASAFURLConnectionOperation.m */,
-				85B4461D17289C4300D584DA /* ASAFXMLRequestOperation.h */,
-				85B4461E17289C4300D584DA /* ASAFXMLRequestOperation.m */,
-				85B4461F17289C4300D584DA /* UIImageView+AFNetworking.h */,
-				85B4462017289C4300D584DA /* UIImageView+AFNetworking.m */,
-			);
-			path = AFNetworking;
-			sourceTree = "<group>";
-		};
 		85B446441728A09F00D584DA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1517,6 +1438,15 @@
 			path = Vendor/SVProgressHUD/SVProgressHUD;
 			sourceTree = SOURCE_ROOT;
 		};
+		85F4D21E172B3FEE00D7EEC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85F4D224172B3FF000D7EEC4 /* libAppSociallySDK.a */,
+				85F4D226172B3FF000D7EEC4 /* AppSociallySDKTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1548,6 +1478,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				85F4D228172B3FFE00D7EEC4 /* PBXTargetDependency */,
 				8515DD76172A1F5600C84CF2 /* PBXTargetDependency */,
 			);
 			name = "Static Library";
@@ -1571,7 +1502,7 @@
 			);
 			name = DemoApp;
 			productName = DemoApp;
-			productReference = 85B4415F17288A2800D584DA /* DemoApp.app */;
+			productReference = 85B4415F17288A2800D584DA /* IKDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1596,6 +1527,10 @@
 			productRefGroup = 85B4416017288A2800D584DA /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 85F4D21E172B3FEE00D7EEC4 /* Products */;
+					ProjectRef = 85F4D21D172B3FEE00D7EEC4 /* AppSociallySDK.xcodeproj */;
+				},
 				{
 					ProductGroup = 85B4478C1728B20E00D584DA /* Products */;
 					ProjectRef = 85B4478B1728B20E00D584DA /* facebook-ios-sdk.xcodeproj */;
@@ -1632,6 +1567,20 @@
 			remoteRef = 85B447971728B20F00D584DA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		85F4D224172B3FF000D7EEC4 /* libAppSociallySDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppSociallySDK.a;
+			remoteRef = 85F4D223172B3FF000D7EEC4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		85F4D226172B3FF000D7EEC4 /* AppSociallySDKTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppSociallySDKTests.octest;
+			remoteRef = 85F4D225172B3FF000D7EEC4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1655,7 +1604,6 @@
 				85B445ED1728906900D584DA /* MainStoryboard.storyboard in Resources */,
 				85B447B11728B7DD00D584DA /* FacebookSDKResources.bundle in Resources */,
 				85B447B61728B93A00D584DA /* SVProgressHUD.bundle in Resources */,
-				8552A7E5172A2B4F00581FA7 /* InviteKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1675,23 +1623,6 @@
 			files = (
 				8515DD70172A1EDB00C84CF2 /* InviteKit.m in Sources */,
 				8515DDA4172A226A00C84CF2 /* SVProgressHUD.m in Sources */,
-				8515DDA5172A226A00C84CF2 /* ASAFHTTPClient.m in Sources */,
-				8515DDA6172A226A00C84CF2 /* ASAFHTTPRequestOperation.m in Sources */,
-				8515DDA7172A226A00C84CF2 /* ASAFImageRequestOperation.m in Sources */,
-				8515DDA8172A226A00C84CF2 /* ASAFJSONRequestOperation.m in Sources */,
-				8515DDA9172A226A00C84CF2 /* ASAFNetworkActivityIndicatorManager.m in Sources */,
-				8515DDAA172A226A00C84CF2 /* ASAFPropertyListRequestOperation.m in Sources */,
-				8515DDAB172A226A00C84CF2 /* ASAFURLConnectionOperation.m in Sources */,
-				8515DDAC172A226A00C84CF2 /* ASAFXMLRequestOperation.m in Sources */,
-				8515DDAD172A226A00C84CF2 /* UIImageView+AFNetworking.m in Sources */,
-				8515DDAE172A226A00C84CF2 /* AppSocially.m in Sources */,
-				8515DDAF172A226A00C84CF2 /* ASAFAppSociallyAPIRequestOperation.m in Sources */,
-				8515DDB0172A226A00C84CF2 /* ASAFAppSociallyAPIResponse.m in Sources */,
-				8515DDB1172A226A00C84CF2 /* ASError.m in Sources */,
-				8515DDB2172A226A00C84CF2 /* ASGlobal.m in Sources */,
-				8515DDB3172A226A00C84CF2 /* ASObject.m in Sources */,
-				8515DDB4172A226A00C84CF2 /* ASPage.m in Sources */,
-				8515DDB5172A226A00C84CF2 /* ASUser.m in Sources */,
 				8515DDB6172A226A00C84CF2 /* XMPPAnonymousAuthentication.m in Sources */,
 				8515DDB7172A226A00C84CF2 /* XMPPDeprecatedDigestAuthentication.m in Sources */,
 				8515DDB8172A226A00C84CF2 /* XMPPDeprecatedPlainAuthentication.m in Sources */,
@@ -1829,6 +1760,11 @@
 			target = 8515DD67172A1EDB00C84CF2 /* Static Library */;
 			targetProxy = 8515DDFC172A229100C84CF2 /* PBXContainerItemProxy */;
 		};
+		85F4D228172B3FFE00D7EEC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppSociallySDK;
+			targetProxy = 85F4D227172B3FFE00D7EEC4 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1952,6 +1888,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)/facebook-ios-sdk",
 					"$(SDKROOT)/usr/include/libxml2",
+					"$(BUILT_PRODUCTS_DIR)/include",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
@@ -1996,6 +1933,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)/facebook-ios-sdk",
 					"$(SDKROOT)/usr/include/libxml2",
+					"$(BUILT_PRODUCTS_DIR)/include",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
@@ -2067,7 +2005,11 @@
 					"\"$(SRCROOT)/Vendor/XMPPFramework/Vendor/libidn\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = IKDemo;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -2109,7 +2051,11 @@
 					"\"$(SRCROOT)/Vendor/XMPPFramework/Vendor/libidn\"",
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = IKDemo;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

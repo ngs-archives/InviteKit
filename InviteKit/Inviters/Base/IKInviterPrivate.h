@@ -11,6 +11,6 @@
 @class IKItem;
 @interface IKInviter (PrivateMethods)
 
-- (void)createPate:(IKItem *)item;
+- (void)createPage:(IKItem *)item;
 
 @end

@@ -26,15 +26,14 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 
 - (void)invite:(IKItem *)item withCompletionHandler:(IKInviteCompletionHandler)handler {
   [super invite:item withCompletionHandler:handler];
-  NSArray *permissions = IKCONFIG(facebookWritePermissions);
+  NSArray *permissions = IKCONFIG(facebookReadPermissions);
   if ([FBSession.activeSession.permissions indexOfObject:@"xmpp_login"] == NSNotFound) {
     if(FBSession.activeSession.isOpen) {
       authingFacebook = self;
       self.pendingAction = IKPendingRefreshToken;
       [SVProgressHUD showWithStatus:IKLocalizedString(@"Authenticating...")];
       [FBSession.activeSession
-       requestNewPublishPermissions:permissions
-       defaultAudience:FBSessionDefaultAudienceFriends
+       requestNewReadPermissions:permissions
        completionHandler:^(FBSession *session, NSError *error) {
          if(error) {
            if(self.completionHandler) {
@@ -51,7 +50,7 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
       [self openSessionWithAllowLoginUI:YES];
     }
   } else
-    [self createPate:item];
+    [self createPage:item];
 }
 
 - (void)sharePage:(ASPage *)page {
@@ -166,6 +165,7 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 
 
 + (BOOL)handleOpenURL:(NSURL *)url {
+  if(!url) return NO;
 	[FBSettings setDefaultAppID:IKCONFIG(facebookAppId)];
 	//if app has "Application does not run in background" = YES, or was killed before it could return from Facebook SSO callback (from Safari or Facebook app)
 	if (authingFacebook == nil &&
@@ -194,7 +194,7 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 
 - (void)openSession
 {
-  [FBSession openActiveSessionWithReadPermissions:nil
+  [FBSession openActiveSessionWithReadPermissions:@[@"xmpp_login"]
                                      allowLoginUI:YES
                                 completionHandler:
    ^(FBSession *session,
