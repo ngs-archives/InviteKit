@@ -20,6 +20,12 @@
 static IKFacebookMessageInviter *authingFacebook=nil;
 static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 
+@interface IKFacebookMessageInviter ()
+
+@property (nonatomic, strong) ASPage *pendingPage;
+
+@end
+
 @implementation IKFacebookMessageInviter
 
 #pragma mark - IKInviter
@@ -27,33 +33,57 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 - (void)invite:(IKItem *)item withCompletionHandler:(IKInviteCompletionHandler)handler {
   [super invite:item withCompletionHandler:handler];
   NSArray *permissions = IKCONFIG(facebookReadPermissions);
-  if ([FBSession.activeSession.permissions indexOfObject:@"xmpp_login"] == NSNotFound) {
-    if(FBSession.activeSession.isOpen) {
-      authingFacebook = self;
-      self.pendingAction = IKPendingRefreshToken;
-      [SVProgressHUD showWithStatus:IKLocalizedString(@"Authenticating...")];
-      [FBSession.activeSession
-       requestNewReadPermissions:permissions
-       completionHandler:^(FBSession *session, NSError *error) {
-         if(error) {
-           if(self.completionHandler) {
-             [SVProgressHUD dismiss];
-             self.completionHandler(error);
-             self.completionHandler = nil;
-           }
-         } else
-           [self tryPendingAction];
-       }];
-    } else {
-      authingFacebook = self;
-      self.pendingAction = IKPendingRefreshToken;
-      [self openSessionWithAllowLoginUI:YES];
-    }
+  if(FBSession.activeSession.isOpen && [FBSession.activeSession.permissions indexOfObject:@"xmpp_login"] == NSNotFound) {
+    authingFacebook = self;
+    self.pendingAction = IKPendingRefreshToken;
+    [SVProgressHUD showWithStatus:IKLocalizedString(@"Authenticating...")];
+    [FBSession.activeSession
+     requestNewReadPermissions:permissions
+     completionHandler:^(FBSession *session, NSError *error) {
+       if(error) {
+         if(self.completionHandler) {
+           [SVProgressHUD dismiss];
+           self.completionHandler(error);
+           self.completionHandler = nil;
+         }
+       } else
+         [self tryPendingAction];
+     }];
+  } else if(!FBSession.activeSession.isOpen) {
+    authingFacebook = self;
+    self.pendingAction = IKPendingRefreshToken;
+    [self openSessionWithAllowLoginUI:YES];
   } else
-    [self createPage:item];
+    [self identifyUser];
+}
+
+- (void)identifyUser {
+  [[FBRequest requestForMe]
+   startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+     AppSocially *as = [InviteKit appsocially];
+     ASUser *user = [[ASUser alloc] init];
+     [user setFacebookId:result[@"id"]];
+     [user setName:result[@"name"]];
+     [user setProfileImageURL:
+      [NSURL URLWithString:
+       [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=square&redirect=false",
+        result[@"id"]]]];
+     [user setData:result];
+     [as setCurrentUser:user];
+     [[InviteKit appsocially] updateUserWithCompletionHandler:^(ASUser *user, NSError *error) {
+       [self showFrinedPicker];
+     }];
+   }];
+}
+
+- (void)showFrinedPicker {
+  // IKFacebookFriendPickerViewController *vc = [[IKFacebookFriendPicker alloc] init];
+  // UINavigationViewControler *nvc = [[UINavigationViewController alloc] initWithRootViewController:vc];
+  // [[UIApplication sharedApplication] ]
 }
 
 - (void)sharePage:(ASPage *)page {
+  self.pendingPage = page;
   // TODO: implement in subclass
 }
 
@@ -74,25 +104,25 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 	// initiating auth we do a quick check to see if we have been through
 	// the cycle. If we don't then we'll create an infinite loop due to the
 	// upstream isAuthed then trytosend logic
-	
+
 	// keep in mind that this reoutine can return TRUE even if the store creds
 	// are no longer valid. For example if the user has revolked the app from
 	// their profile. In this case the stored tolken look like it should work,
 	// but the first request will fail
 	if(FBSession.activeSession.isOpen)
 		return YES;
-	
+
   BOOL result = NO;
   FBSession *session =
 	[[FBSession alloc] initWithAppID:IKCONFIG(facebookAppId)
                        permissions:IKCONFIG(facebookReadPermissions)	// FB only wants read or publish so use default read, request publish when we need it
                    urlSchemeSuffix:IKCONFIG(facebookLocalAppId)
                 tokenCacheStrategy:nil];
-  
+
   if (allowLoginUI || (session.state == FBSessionStateCreatedTokenLoaded)) {
-    
+
 		if (allowLoginUI) [SVProgressHUD showWithStatus:IKLocalizedString(@"Logging In...")];
-    
+
     [FBSession setActiveSession:session];
     [session openWithBehavior:FBSessionLoginBehaviorUseSystemAccountIfPresent
             completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
@@ -101,7 +131,7 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
             }];
     result = session.isOpen;
   }
-	
+
   return result;
 }
 
@@ -120,11 +150,11 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 			// this happens when the permissions just get extended
 		}else{
 			[self restoreItem];
-			
+
 			if (authingFacebook == self) {
 				[self authDidFinish:true];
 			}
-			
+
 			[self tryPendingAction];
 		}
 	}else if (FB_ISSESSIONSTATETERMINAL(state)){
@@ -135,12 +165,12 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 			// errors super awesome. So look for the errors in the FBRequestHandlerCallback
 		}
 	}
-	
+
 	// post a notification so that custom UI can show the login state.
   [[NSNotificationCenter defaultCenter]
    postNotificationName:@"IKFacebookSessionStateChangeNotification"
    object:session];
-  
+
   if (error) {
     [SVProgressHUD showErrorWithStatus:error.localizedDescription];
   }
@@ -159,7 +189,7 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
       error = [NSError errorWithDomain:@"ly.appsocial.invite-kit.auth-failure" code:100 userInfo:@{}];
     self.completionHandler(error);
   }
-  
+
 }
 
 
@@ -182,7 +212,7 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 	// We need to properly handle activation of the application with regards to SSO
 	//  (e.g., returning from iOS 6.0 authorization dialog or from fast app switching).
 	[FBSession.activeSession handleDidBecomeActive];
-  
+
 }
 + (void)handleWillTerminate {
 	[FBSettings setDefaultAppID:IKCONFIG(facebookAppId)];
