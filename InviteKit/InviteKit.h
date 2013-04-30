@@ -37,12 +37,40 @@ extern NSString * const IKAuthDidFinishNotification;
 
 @interface InviteKit : NSObject
 
-+ (AppSocially *)appsocially;
-+ (NSString *)libraryBundlePath;
+@property (nonatomic, retain) UIViewController *currentView;
+@property (nonatomic, retain) UIViewController *pendingView;
+@property BOOL isDismissingView;
 
+#pragma mark -
+#pragma mark View Management
+
++ (void)setRootViewController:(UIViewController *)vc;
+
+/* original show method, wraps the view to UINavigationViewController prior presenting, if not already a UINavigationViewController */
+- (void)showViewController:(UIViewController *)vc;
+/* displays sharers with custom UI - without wrapping */
+- (void)showStandaloneViewController:(UIViewController *)vc;
+/* returns current top view controller to display UI from */
+- (UIViewController *)rootViewForUIDisplay;
+
+- (void)hideCurrentViewControllerAnimated:(BOOL)animated;
+- (void)viewWasDismissed;
+
++ (UIBarStyle)barStyle;
++ (UIModalPresentationStyle)modalPresentationStyleForController:(UIViewController *)controller;
++ (UIModalTransitionStyle)modalTransitionStyleForController:(UIViewController *)controller;
+
+#pragma mark - Singleton
+
++ (InviteKit *)currentHelper;
++ (NSError *)error:(NSString *)description, ...;
 + (BOOL)handleOpenURL:(NSURL *)url;
 + (void)handleDidBecomeActive;
 + (void)handleWillTerminate;
+
++ (AppSocially *)appsocially;
++ (NSString *)libraryBundlePath;
+
 
 @end
 

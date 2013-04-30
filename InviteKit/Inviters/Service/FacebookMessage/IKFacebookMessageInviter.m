@@ -15,7 +15,7 @@
 #import "SVProgressHUD.h"
 #import "XMPPFramework.h"
 #import "XMPPXFacebookPlatformAuthentication.h"
-
+#import "IKFacebookFriendPickerViewController.h"
 
 static IKFacebookMessageInviter *authingFacebook=nil;
 static IKFacebookMessageInviter *requestingPermisFacebook=nil;
@@ -77,9 +77,18 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 }
 
 - (void)showFrinedPicker {
-  // IKFacebookFriendPickerViewController *vc = [[IKFacebookFriendPicker alloc] init];
-  // UINavigationViewControler *nvc = [[UINavigationViewController alloc] initWithRootViewController:vc];
-  // [[UIApplication sharedApplication] ]
+  IKFacebookFriendPickerViewController *vc = [[IKFacebookFriendPickerViewController alloc] initWithHandler:^(NSDictionary *friend, IKFacebookFriendPickerViewController *viewController) {
+    if(friend)
+      [self didPickFriend:friend];
+    else
+      [viewController dismissViewControllerAnimated:YES completion:NULL];
+  }];
+  UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+  [[InviteKit currentHelper] showStandaloneViewController:nvc];
+}
+
+- (void)didPickFriend:(NSDictionary *)friend {
+  
 }
 
 - (void)sharePage:(ASPage *)page {
@@ -189,10 +198,7 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
       error = [NSError errorWithDomain:@"ly.appsocial.invite-kit.auth-failure" code:100 userInfo:@{}];
     self.completionHandler(error);
   }
-
 }
-
-
 
 + (BOOL)handleOpenURL:(NSURL *)url {
   if(!url) return NO;

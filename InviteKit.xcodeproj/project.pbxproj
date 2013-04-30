@@ -13,7 +13,6 @@
 		8515DD6E172A1EDB00C84CF2 /* InviteKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8515DD6D172A1EDB00C84CF2 /* InviteKit.h */; };
 		8515DD70172A1EDB00C84CF2 /* InviteKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8515DD6F172A1EDB00C84CF2 /* InviteKit.m */; };
 		8515DD74172A1F1400C84CF2 /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447941728B20F00D584DA /* libfacebook_ios_sdk.a */; };
-		8515DD78172A221F00C84CF2 /* IKFacebookFriendPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B446511728AC1400D584DA /* IKFacebookFriendPickerViewController.m */; };
 		8515DD7A172A221F00C84CF2 /* IKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B446461728A15200D584DA /* IKItem.m */; };
 		8515DD7C172A221F00C84CF2 /* IKInviter.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4460717289B2900D584DA /* IKInviter.m */; };
 		8515DD7E172A221F00C84CF2 /* IKXMPPInviter.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4460A17289B3C00D584DA /* IKXMPPInviter.m */; };
@@ -139,6 +138,10 @@
 		8552A7E2172A243B00581FA7 /* InviteKitDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B445E11728906900D584DA /* InviteKitDemoAppDelegate.m */; };
 		8552A7E3172A24DE00581FA7 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B442A217288A5100D584DA /* libidn.a */; };
 		8552A7E6172A2B4F00581FA7 /* InviteKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8552A7E4172A2B4F00581FA7 /* InviteKit.bundle */; };
+		8552A804172F3ED200581FA7 /* IKFacebookFriendPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A7FF172F3ED200581FA7 /* IKFacebookFriendPickerCell.m */; };
+		8552A805172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A801172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m */; };
+		8552A806172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A803172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m */; };
+		8552A809172F3F1F00581FA7 /* IKMessageFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A808172F3F1F00581FA7 /* IKMessageFormViewController.m */; };
 		85B4416317288A2800D584DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416217288A2800D584DA /* UIKit.framework */; };
 		85B4416517288A2800D584DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416417288A2800D584DA /* Foundation.framework */; };
 		85B4416717288A2800D584DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416617288A2800D584DA /* CoreGraphics.framework */; };
@@ -259,6 +262,15 @@
 		8515DD6D172A1EDB00C84CF2 /* InviteKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteKit.h; sourceTree = "<group>"; };
 		8515DD6F172A1EDB00C84CF2 /* InviteKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteKit.m; sourceTree = "<group>"; };
 		8552A7E4172A2B4F00581FA7 /* InviteKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InviteKit.bundle; sourceTree = "<group>"; };
+		8552A7F0172EF28400581FA7 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		8552A7FE172F3ED200581FA7 /* IKFacebookFriendPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKFacebookFriendPickerCell.h; sourceTree = "<group>"; };
+		8552A7FF172F3ED200581FA7 /* IKFacebookFriendPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKFacebookFriendPickerCell.m; sourceTree = "<group>"; };
+		8552A800172F3ED200581FA7 /* IKFacebookFriendPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKFacebookFriendPickerViewController.h; sourceTree = "<group>"; };
+		8552A801172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKFacebookFriendPickerViewController.m; sourceTree = "<group>"; };
+		8552A802172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKFacebookFriendSearchResultDataSource.h; sourceTree = "<group>"; };
+		8552A803172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKFacebookFriendSearchResultDataSource.m; sourceTree = "<group>"; };
+		8552A807172F3F1F00581FA7 /* IKMessageFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKMessageFormViewController.h; sourceTree = "<group>"; };
+		8552A808172F3F1F00581FA7 /* IKMessageFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKMessageFormViewController.m; sourceTree = "<group>"; };
 		85B4415F17288A2800D584DA /* IKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B4416217288A2800D584DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		85B4416417288A2800D584DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -514,8 +526,6 @@
 		85B446461728A15200D584DA /* IKItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKItem.m; sourceTree = "<group>"; };
 		85B4464C1728A42D00D584DA /* IKFacebookMessageInviter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKFacebookMessageInviter.h; sourceTree = "<group>"; };
 		85B4464D1728A42D00D584DA /* IKFacebookMessageInviter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKFacebookMessageInviter.m; sourceTree = "<group>"; };
-		85B446501728AC1400D584DA /* IKFacebookFriendPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKFacebookFriendPickerViewController.h; sourceTree = "<group>"; };
-		85B446511728AC1400D584DA /* IKFacebookFriendPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKFacebookFriendPickerViewController.m; sourceTree = "<group>"; };
 		85B4478B1728B20E00D584DA /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "facebook-ios-sdk.xcodeproj"; path = "Vendor/Facebook/src/facebook-ios-sdk.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		85B4479C1728B25200D584DA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		85B447A11728B31E00D584DA /* InviteKitMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteKitMainViewController.h; sourceTree = "<group>"; };
@@ -614,6 +624,19 @@
 				8515DD6C172A1EDB00C84CF2 /* InviteKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8552A7FD172F3ED200581FA7 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				8552A7FE172F3ED200581FA7 /* IKFacebookFriendPickerCell.h */,
+				8552A7FF172F3ED200581FA7 /* IKFacebookFriendPickerCell.m */,
+				8552A800172F3ED200581FA7 /* IKFacebookFriendPickerViewController.h */,
+				8552A801172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m */,
+				8552A802172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.h */,
+				8552A803172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m */,
+			);
+			path = Facebook;
 			sourceTree = "<group>";
 		};
 		85B441191728891500D584DA = {
@@ -1393,6 +1416,7 @@
 		85B446441728A09F00D584DA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8552A7F0172EF28400581FA7 /* Singleton.h */,
 				85B446451728A15100D584DA /* IKItem.h */,
 				85B446461728A15200D584DA /* IKItem.m */,
 			);
@@ -1411,8 +1435,9 @@
 		85B4464F1728A66500D584DA /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				85B446501728AC1400D584DA /* IKFacebookFriendPickerViewController.h */,
-				85B446511728AC1400D584DA /* IKFacebookFriendPickerViewController.m */,
+				8552A7FD172F3ED200581FA7 /* Facebook */,
+				8552A807172F3F1F00581FA7 /* IKMessageFormViewController.h */,
+				8552A808172F3F1F00581FA7 /* IKMessageFormViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1721,7 +1746,6 @@
 				8515DDA1172A225700C84CF2 /* XMPPMUC.m in Sources */,
 				8515DDA2172A225700C84CF2 /* XMPPRoom.m in Sources */,
 				8515DDA3172A225700C84CF2 /* TURNSocket.m in Sources */,
-				8515DD78172A221F00C84CF2 /* IKFacebookFriendPickerViewController.m in Sources */,
 				8515DD7A172A221F00C84CF2 /* IKItem.m in Sources */,
 				8515DD7C172A221F00C84CF2 /* IKInviter.m in Sources */,
 				8515DD7E172A221F00C84CF2 /* IKXMPPInviter.m in Sources */,
@@ -1739,6 +1763,10 @@
 				85B447A31728B31E00D584DA /* InviteKitMainViewController.m in Sources */,
 				85B447A51728B3A000D584DA /* main.m in Sources */,
 				8515DD461729F85700C84CF2 /* InviteDemoAppConfigurator.m in Sources */,
+				8552A804172F3ED200581FA7 /* IKFacebookFriendPickerCell.m in Sources */,
+				8552A805172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m in Sources */,
+				8552A806172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m in Sources */,
+				8552A809172F3F1F00581FA7 /* IKMessageFormViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1889,6 +1917,7 @@
 					"$(BUILT_PRODUCTS_DIR)/facebook-ios-sdk",
 					"$(SDKROOT)/usr/include/libxml2",
 					"$(BUILT_PRODUCTS_DIR)/include",
+					"$(SRCROOT)/Vendor/AppSocially/AppSociallySDK/AFNetworking",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
@@ -1934,6 +1963,7 @@
 					"$(BUILT_PRODUCTS_DIR)/facebook-ios-sdk",
 					"$(SDKROOT)/usr/include/libxml2",
 					"$(BUILT_PRODUCTS_DIR)/include",
+					"$(SRCROOT)/Vendor/AppSocially/AppSociallySDK/AFNetworking",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
