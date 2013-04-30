@@ -11,10 +11,12 @@
 @implementation InviteDemoAppConfigurator
 
 - (NSString *)facebookAppId {
+#error Fill your App's FACEBOOK APP ID
   return @"<#YOUR_FACEBOOK_APP_ID#>";
 }
 
 - (NSString *)appSociallyToken {
+#error Fill your App's APPSOCIALLY API KEY
   return @"<#YOUR_APPSOCIALLY_TOKEN#>";
 }
 
