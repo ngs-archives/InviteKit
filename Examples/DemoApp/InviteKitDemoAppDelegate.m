@@ -14,6 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   DefaultIKConfigurator *configurator = [[InviteDemoAppConfigurator alloc] init];
+  [InviteKit setActivityIndicatorEnabled:YES];
   [IKConfiguration sharedInstanceWithConfigurator:configurator];
   return YES;
 }

@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 AppSocially Inc. All rights reserved.
 //
 
+#import "FacebookSDK.h"
 #import "IKConfiguration.h"
 #import "IKFacebookMessageInviter.h"
 #import "IKInviterPrivate.h"
@@ -13,20 +14,20 @@
 #import "InviteKit.h"
 #import "IKInviterPrivate.h"
 #import "SVProgressHUD.h"
+#import "IKMessageFormViewController.h"
+#import "IKFacebookFriendPickerViewController.h"
 #import "XMPPFramework.h"
 #import "XMPPXFacebookPlatformAuthentication.h"
-#import "IKFacebookFriendPickerViewController.h"
 
 static IKFacebookMessageInviter *authingFacebook=nil;
 static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 
 @interface IKFacebookMessageInviter ()
 
-@property (nonatomic, strong) ASPage *pendingPage;
-
 @end
 
 @implementation IKFacebookMessageInviter
+@synthesize xmppStream = _xmppStream;
 
 #pragma mark - IKInviter
 
@@ -36,7 +37,7 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
   if(FBSession.activeSession.isOpen && [FBSession.activeSession.permissions indexOfObject:@"xmpp_login"] == NSNotFound) {
     authingFacebook = self;
     self.pendingAction = IKPendingRefreshToken;
-    [SVProgressHUD showWithStatus:IKLocalizedString(@"Authenticating...")];
+    [SVProgressHUD showWithStatus:IKLocalizedString(@"Authenticating...") maskType:SVProgressHUDMaskTypeGradient];
     [FBSession.activeSession
      requestNewReadPermissions:permissions
      completionHandler:^(FBSession *session, NSError *error) {
@@ -79,7 +80,7 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
 - (void)showFrinedPicker {
   IKFacebookFriendPickerViewController *vc = [[IKFacebookFriendPickerViewController alloc] initWithHandler:^(NSDictionary *friend, IKFacebookFriendPickerViewController *viewController) {
     if(friend)
-      [self didPickFriend:friend];
+      [self didPickFriend:friend withViewController:viewController];
     else
       [viewController dismissViewControllerAnimated:YES completion:NULL];
   }];
@@ -87,13 +88,14 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
   [[InviteKit currentHelper] showStandaloneViewController:nvc];
 }
 
-- (void)didPickFriend:(NSDictionary *)friend {
-  
-}
-
-- (void)sharePage:(ASPage *)page {
-  self.pendingPage = page;
-  // TODO: implement in subclass
+- (void)didPickFriend:(NSDictionary *)friend withViewController:(IKFacebookFriendPickerViewController *)viewController {
+  IKMessageFormViewController *vc = [[IKMessageFormViewController alloc] initWithCompletionHandler:^(IKMessageFormViewController *viewController, BOOL canceled) {
+    IKItem *item = [IKItem itemWithProperties:@{ @"receiver": friend, @"message": viewController.textView.text }];
+    self.pendingReceiverId = [NSString stringWithFormat:@"-%@@chat.facebook.com", friend[@"id"]];
+    [self createPage:item];
+    return YES;
+  }];
+  [viewController.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)dealloc {
@@ -124,13 +126,13 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
   BOOL result = NO;
   FBSession *session =
 	[[FBSession alloc] initWithAppID:IKCONFIG(facebookAppId)
-                       permissions:IKCONFIG(facebookReadPermissions)	// FB only wants read or publish so use default read, request publish when we need it
+                       permissions:IKCONFIG(facebookReadPermissions)
                    urlSchemeSuffix:IKCONFIG(facebookLocalAppId)
                 tokenCacheStrategy:nil];
 
   if (allowLoginUI || (session.state == FBSessionStateCreatedTokenLoaded)) {
 
-		if (allowLoginUI) [SVProgressHUD showWithStatus:IKLocalizedString(@"Logging In...")];
+		if (allowLoginUI) [SVProgressHUD showWithStatus:IKLocalizedString(@"Logging In...") maskType:SVProgressHUDMaskTypeGradient];
 
     [FBSession setActiveSession:session];
     [session openWithBehavior:FBSessionLoginBehaviorUseSystemAccountIfPresent
@@ -237,6 +239,33 @@ static IKFacebookMessageInviter *requestingPermisFacebook=nil;
      FBSessionState state, NSError *error) {
      [self sessionStateChanged:session state:state error:error];
    }];
+}
+
+#pragma mark - XMPP
+
+- (XMPPStream *)xmppStream {
+  if(nil == _xmppStream) {
+    _xmppStream = [[XMPPStream alloc] initWithFacebookAppId:IKCONFIG(facebookAppId)];
+    [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+  }
+  return _xmppStream;
+}
+
+- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error {
+  [self disconnect];
+  [[FBSession activeSession] closeAndClearTokenInformation];
+}
+
+- (void)xmppStreamDidConnect:(XMPPStream *)sender {
+  NSError *error = nil;
+  if (![self.xmppStream isSecure]) {
+    NSError *error = nil;
+    [self.xmppStream secureConnection:&error];
+  } else {
+    BOOL result = [self.xmppStream authenticateWithFacebookAccessToken:[FBSession activeSession].accessTokenData.accessToken error:&error];
+    if (result == NO) {
+    }
+  }
 }
 
 

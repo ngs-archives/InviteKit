@@ -28,7 +28,7 @@ static NSString *const kIKStoredShareInfoKey = @"kIKStoredShareInfo";
 }
 
 - (void)createPage:(IKItem *)item {
-  [SVProgressHUD showWithStatus:IKLocalizedString(@"Creating page...")];
+  [SVProgressHUD showWithStatus:IKLocalizedString(@"Creating page...") maskType:SVProgressHUDMaskTypeGradient];
   [[InviteKit appsocially]
    createPageWithTemplate:IKCONFIG(inviteTemplateName)
    withData:item.properties
@@ -68,6 +68,9 @@ static NSString *const kIKStoredShareInfoKey = @"kIKStoredShareInfo";
   [defaults synchronize];
 }
 
+- (void)didSendInvitation {
+  // TODO: implement in subclass
+}
 
 #pragma mark -
 #pragma mark Pending Actions

@@ -7,11 +7,14 @@
 //
 
 #import "IKInviter.h"
+#import "XMPPStream.h"
 
-@class XMPPStream;
-@interface IKXMPPInviter : IKInviter
+@class ASPage;
+@interface IKXMPPInviter : IKInviter<XMPPStreamDelegate>
 
 @property (nonatomic, strong, readonly) XMPPStream *xmppStream;
+@property (nonatomic, strong) ASPage *pendingPage;
+@property (nonatomic, strong) NSString *pendingReceiverId;
 
 - (void)disconnect;
 

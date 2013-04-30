@@ -33,5 +33,6 @@ typedef void (^IKInviteCompletionHandler)(NSError *error);
 + (void)clearSavedItem;
 - (void)tryPendingAction;
 - (void)sharePage:(ASPage *)page;
+- (void)didSendInvitation;
 
 @end

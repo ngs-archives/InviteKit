@@ -138,10 +138,10 @@
 		8552A7E2172A243B00581FA7 /* InviteKitDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B445E11728906900D584DA /* InviteKitDemoAppDelegate.m */; };
 		8552A7E3172A24DE00581FA7 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B442A217288A5100D584DA /* libidn.a */; };
 		8552A7E6172A2B4F00581FA7 /* InviteKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8552A7E4172A2B4F00581FA7 /* InviteKit.bundle */; };
-		8552A804172F3ED200581FA7 /* IKFacebookFriendPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A7FF172F3ED200581FA7 /* IKFacebookFriendPickerCell.m */; };
-		8552A805172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A801172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m */; };
-		8552A806172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A803172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m */; };
-		8552A809172F3F1F00581FA7 /* IKMessageFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A808172F3F1F00581FA7 /* IKMessageFormViewController.m */; };
+		8552A80A172F464F00581FA7 /* IKFacebookFriendPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A7FF172F3ED200581FA7 /* IKFacebookFriendPickerCell.m */; };
+		8552A80B172F464F00581FA7 /* IKFacebookFriendPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A801172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m */; };
+		8552A80C172F464F00581FA7 /* IKFacebookFriendSearchResultDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A803172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m */; };
+		8552A80D172F464F00581FA7 /* IKMessageFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A808172F3F1F00581FA7 /* IKMessageFormViewController.m */; };
 		85B4416317288A2800D584DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416217288A2800D584DA /* UIKit.framework */; };
 		85B4416517288A2800D584DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416417288A2800D584DA /* Foundation.framework */; };
 		85B4416717288A2800D584DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416617288A2800D584DA /* CoreGraphics.framework */; };
@@ -1646,6 +1646,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8552A80A172F464F00581FA7 /* IKFacebookFriendPickerCell.m in Sources */,
+				8552A80B172F464F00581FA7 /* IKFacebookFriendPickerViewController.m in Sources */,
+				8552A80C172F464F00581FA7 /* IKFacebookFriendSearchResultDataSource.m in Sources */,
+				8552A80D172F464F00581FA7 /* IKMessageFormViewController.m in Sources */,
 				8515DD70172A1EDB00C84CF2 /* InviteKit.m in Sources */,
 				8515DDA4172A226A00C84CF2 /* SVProgressHUD.m in Sources */,
 				8515DDB6172A226A00C84CF2 /* XMPPAnonymousAuthentication.m in Sources */,
@@ -1763,10 +1767,6 @@
 				85B447A31728B31E00D584DA /* InviteKitMainViewController.m in Sources */,
 				85B447A51728B3A000D584DA /* main.m in Sources */,
 				8515DD461729F85700C84CF2 /* InviteDemoAppConfigurator.m in Sources */,
-				8552A804172F3ED200581FA7 /* IKFacebookFriendPickerCell.m in Sources */,
-				8552A805172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m in Sources */,
-				8552A806172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m in Sources */,
-				8552A809172F3F1F00581FA7 /* IKMessageFormViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

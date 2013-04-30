@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class IKMessageFormViewController;
-typedef void (^IKMessageFormCompletionHandler)(IKMessageFormViewController *viewController, BOOL canceled);
+typedef BOOL (^IKMessageFormCompletionHandler)(IKMessageFormViewController *viewController, BOOL canceled);
 
-@interface IKMessageFormViewController : UIViewController
+@interface IKMessageFormViewController : UIViewController<UITextViewDelegate>
 
 - (id)initWithCompletionHandler:(IKMessageFormCompletionHandler)completionHandler;
 
 @property (nonatomic, copy) IKMessageFormCompletionHandler completionHandler;
+@property (nonatomic, readonly) UITextView *textView;
+@property (nonatomic, readonly) UIBarButtonItem *doneButtonItem;
+@property (nonatomic, readonly) UIBarButtonItem *cancelButtonItem;
 
 @end

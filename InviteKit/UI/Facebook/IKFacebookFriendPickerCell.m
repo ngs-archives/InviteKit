@@ -8,6 +8,7 @@
 
 #import "IKFacebookFriendPickerCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "ASAFNetworkActivityIndicatorManager.h"
 
 @implementation IKFacebookFriendPickerCell
 @synthesize data = _data;
@@ -45,18 +46,21 @@
 
   __block IKFacebookFriendPickerCell *that = self;
   [self.textLabel setText:name];
+  [[ASAFNetworkActivityIndicatorManager sharedManager] incrementActivityCount];
   [self.activityIndicatorView startAnimating];
   self.imageView.hidden = YES;
   [self.imageView
    setImageWithURLRequest:[NSURLRequest requestWithURL:imageURL]
    placeholderImage:nil
    success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+     [[ASAFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
      [that.activityIndicatorView stopAnimating];
      that.imageView.image = image;
      that.imageView.hidden = NO;
      [that setNeedsLayout];
    }
    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+     [[ASAFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
      [that.activityIndicatorView stopAnimating];
      [that setNeedsLayout];
    }];

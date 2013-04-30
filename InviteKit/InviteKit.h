@@ -56,6 +56,9 @@ extern NSString * const IKAuthDidFinishNotification;
 - (void)hideCurrentViewControllerAnimated:(BOOL)animated;
 - (void)viewWasDismissed;
 
++ (void)setActivityIndicatorEnabled:(BOOL)enabled;
++ (BOOL)isActivityIndicatorEnabled;
+
 + (UIBarStyle)barStyle;
 + (UIModalPresentationStyle)modalPresentationStyleForController:(UIViewController *)controller;
 + (UIModalTransitionStyle)modalTransitionStyleForController:(UIViewController *)controller;

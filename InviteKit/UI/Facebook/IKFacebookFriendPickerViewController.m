@@ -8,6 +8,7 @@
 
 #import "IKFacebookFriendPickerViewController.h"
 #import "IKFacebookFriendSearchResultDataSource.h"
+#import "ASAFNetworkActivityIndicatorManager.h"
 #import "IKFacebookFriendPickerCell.h"
 #import "FacebookSDK.h"
 #import "InviteKit.h"
@@ -39,7 +40,9 @@
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
   if(!self.friends) {
+    [[ASAFNetworkActivityIndicatorManager sharedManager] incrementActivityCount];
     [[FBRequest requestForMyFriends] startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+      [[ASAFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
       if(error)
         [SVProgressHUD showErrorWithStatus:error.localizedDescription];
       else if([result[@"data"] isKindOfClass:[NSArray class]]) {

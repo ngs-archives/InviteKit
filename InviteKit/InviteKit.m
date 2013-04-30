@@ -27,6 +27,7 @@
 #import "IKConfiguration.h"
 #import "Singleton.h"
 #import <AppSociallySDK/AppSociallySDK.h>
+#import "ASAFNetworkActivityIndicatorManager.h"
 
 NSString * const IKSendDidStartNotification         = @"IKSendDidStartNotification";
 NSString * const IKSendDidFinishNotification        = @"IKSendDidFinish";
@@ -42,6 +43,14 @@ NSString * const IKAuthDidFinishNotification        = @"IKAuthDidFinish";
 @end
 
 @implementation InviteKit
+
++ (void)setActivityIndicatorEnabled:(BOOL)enabled {
+  [[ASAFNetworkActivityIndicatorManager sharedManager] setEnabled:enabled];
+}
+
++ (BOOL)isActivityIndicatorEnabled {
+  return [[ASAFNetworkActivityIndicatorManager sharedManager] isEnabled];
+}
 
 + (InviteKit *)currentHelper {
   DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
