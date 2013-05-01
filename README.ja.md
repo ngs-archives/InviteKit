@@ -2,15 +2,16 @@
 
 ##ソース取得
 
-- git clone
-- git submodule update
+	git clone git@github.com:appsocially/InviteKit.git
+	cd InviteKit
+	git submodule update --init --recursive
 
 
-##諸々設定
+##サンプルアプリをビルドする
 
-- (InviteDemoAppConfigurator.sample.mを複製してInviteDemoAppConfigurator.mにリネーム)
 - Facebook Developersでアプリ生成
   - Info.plistに設定してあるBundle IDを、Facebook Developersにも設定
+- *Examples/DemoApp/InviteDemoAppConfigurator.m* の内容を
 - AppSociallyでアプリ生成
 - InviteDemoAppConfigurator.m に **Facebook App ID** と **AppSocially API Key** を設定
 
