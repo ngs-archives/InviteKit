@@ -35,7 +35,16 @@
     self.handler(friend, self);
 }
 
+- (void)done:(id)sender {
+  [[InviteKit currentHelper] hideCurrentViewControllerAnimated:YES];
+}
+
 #pragma mark - UIViewController
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];
+}
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];

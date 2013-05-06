@@ -118,7 +118,6 @@
 		8515DDF9172A226B00C84CF2 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4429817288A5100D584DA /* DDXMLDocument.m */; };
 		8515DDFA172A226B00C84CF2 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4429A17288A5100D584DA /* DDXMLElement.m */; };
 		8515DDFB172A226B00C84CF2 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B4429C17288A5100D584DA /* DDXMLNode.m */; };
-		8515DDFE172A229700C84CF2 /* libInviteKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8515DD68172A1EDB00C84CF2 /* libInviteKit.a */; };
 		8515DDFF172A233A00C84CF2 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C617288CB800D584DA /* libresolv.dylib */; };
 		8515DE00172A233C00C84CF2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447A61728B5FB00D584DA /* libsqlite3.dylib */; };
 		8515DE01172A233F00C84CF2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C017288AA400D584DA /* libxml2.dylib */; };
@@ -142,11 +141,12 @@
 		8552A80B172F464F00581FA7 /* IKFacebookFriendPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A801172F3ED200581FA7 /* IKFacebookFriendPickerViewController.m */; };
 		8552A80C172F464F00581FA7 /* IKFacebookFriendSearchResultDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A803172F3ED200581FA7 /* IKFacebookFriendSearchResultDataSource.m */; };
 		8552A80D172F464F00581FA7 /* IKMessageFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552A808172F3F1F00581FA7 /* IKMessageFormViewController.m */; };
+		8587179317376CA200E0E172 /* libInviteKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8515DD68172A1EDB00C84CF2 /* libInviteKit.a */; };
 		85B4416317288A2800D584DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416217288A2800D584DA /* UIKit.framework */; };
 		85B4416517288A2800D584DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416417288A2800D584DA /* Foundation.framework */; };
 		85B4416717288A2800D584DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4416617288A2800D584DA /* CoreGraphics.framework */; };
 		85B445C117288AA400D584DA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C017288AA400D584DA /* libxml2.dylib */; };
-		85B445C317288ADF00D584DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C217288ADF00D584DA /* Security.framework */; };
+		85B445C317288ADF00D584DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C217288ADF00D584DA /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		85B445C717288CB800D584DA /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C617288CB800D584DA /* libresolv.dylib */; };
 		85B445C917288CBD00D584DA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C817288CBD00D584DA /* CFNetwork.framework */; };
 		85B445CE17288E5700D584DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B445C417288AE900D584DA /* CoreLocation.framework */; };
@@ -160,10 +160,10 @@
 		85B4479D1728B25200D584DA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4479C1728B25200D584DA /* MobileCoreServices.framework */; };
 		85B447A31728B31E00D584DA /* InviteKitMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B447A21728B31E00D584DA /* InviteKitMainViewController.m */; };
 		85B447A51728B3A000D584DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B447A41728B3A000D584DA /* main.m */; };
-		85B447A71728B5FB00D584DA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447A61728B5FB00D584DA /* libsqlite3.dylib */; };
-		85B447A91728B61700D584DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447A81728B61700D584DA /* Accounts.framework */; };
-		85B447AB1728B62800D584DA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447AA1728B62800D584DA /* Social.framework */; };
-		85B447AD1728B65800D584DA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447AC1728B65700D584DA /* AdSupport.framework */; };
+		85B447A71728B5FB00D584DA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447A61728B5FB00D584DA /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
+		85B447A91728B61700D584DA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447A81728B61700D584DA /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		85B447AB1728B62800D584DA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447AA1728B62800D584DA /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		85B447AD1728B65800D584DA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447AC1728B65700D584DA /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		85B447B11728B7DD00D584DA /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85B447B01728B7DC00D584DA /* FacebookSDKResources.bundle */; };
 		85B447B61728B93A00D584DA /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85B447B31728B93A00D584DA /* SVProgressHUD.bundle */; };
 		85B447BD1728BC1100D584DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B447BC1728BC1100D584DA /* QuartzCore.framework */; };
@@ -173,13 +173,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8515DD5E172A1D6300C84CF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 85B4411A1728891500D584DA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8515DD4E172A16D300C84CF2;
-			remoteInfo = InviteKitLibraryResources;
-		};
 		8515DD75172A1F5600C84CF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85B4478B1728B20E00D584DA /* facebook-ios-sdk.xcodeproj */;
@@ -187,12 +180,19 @@
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = "facebook-ios-sdk";
 		};
-		8515DDFC172A229100C84CF2 /* PBXContainerItemProxy */ = {
+		858717941737701100E0E172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85B4411A1728891500D584DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8515DD4E172A16D300C84CF2;
+			remoteInfo = "Resource Bundle";
+		};
+		858717961737701100E0E172 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85B4411A1728891500D584DA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8515DD67172A1EDB00C84CF2;
-			remoteInfo = "InviteKit Static Library";
+			remoteInfo = "Static Library";
 		};
 		85B447931728B20F00D584DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -585,24 +585,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F4D237172B45E900D7EEC4 /* libiconv.2.dylib in Frameworks */,
-				8515DDFE172A229700C84CF2 /* libInviteKit.a in Frameworks */,
-				85B447BD1728BC1100D584DA /* QuartzCore.framework in Frameworks */,
-				85B447AD1728B65800D584DA /* AdSupport.framework in Frameworks */,
-				85B447AB1728B62800D584DA /* Social.framework in Frameworks */,
+				8587179317376CA200E0E172 /* libInviteKit.a in Frameworks */,
 				85B447A91728B61700D584DA /* Accounts.framework in Frameworks */,
-				85B447A71728B5FB00D584DA /* libsqlite3.dylib in Frameworks */,
-				85B4479D1728B25200D584DA /* MobileCoreServices.framework in Frameworks */,
-				85B445D217288F0900D584DA /* SystemConfiguration.framework in Frameworks */,
-				85B445D017288EE300D584DA /* CoreData.framework in Frameworks */,
-				85B445CE17288E5700D584DA /* CoreLocation.framework in Frameworks */,
-				85B445C117288AA400D584DA /* libxml2.dylib in Frameworks */,
+				85B447AD1728B65800D584DA /* AdSupport.framework in Frameworks */,
 				85B445C917288CBD00D584DA /* CFNetwork.framework in Frameworks */,
-				85B445C717288CB800D584DA /* libresolv.dylib in Frameworks */,
-				85B445C317288ADF00D584DA /* Security.framework in Frameworks */,
-				85B4416317288A2800D584DA /* UIKit.framework in Frameworks */,
-				85B4416517288A2800D584DA /* Foundation.framework in Frameworks */,
+				85B445D017288EE300D584DA /* CoreData.framework in Frameworks */,
 				85B4416717288A2800D584DA /* CoreGraphics.framework in Frameworks */,
+				85B445CE17288E5700D584DA /* CoreLocation.framework in Frameworks */,
+				85B4416517288A2800D584DA /* Foundation.framework in Frameworks */,
+				85B4479D1728B25200D584DA /* MobileCoreServices.framework in Frameworks */,
+				85B447BD1728BC1100D584DA /* QuartzCore.framework in Frameworks */,
+				85B445C317288ADF00D584DA /* Security.framework in Frameworks */,
+				85B447AB1728B62800D584DA /* Social.framework in Frameworks */,
+				85B445D217288F0900D584DA /* SystemConfiguration.framework in Frameworks */,
+				85B4416317288A2800D584DA /* UIKit.framework in Frameworks */,
+				85F4D237172B45E900D7EEC4 /* libiconv.2.dylib in Frameworks */,
+				85B445C717288CB800D584DA /* libresolv.dylib in Frameworks */,
+				85B447A71728B5FB00D584DA /* libsqlite3.dylib in Frameworks */,
+				85B445C117288AA400D584DA /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1522,8 +1522,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				8515DDFD172A229100C84CF2 /* PBXTargetDependency */,
-				8515DD5F172A1D6300C84CF2 /* PBXTargetDependency */,
+				858717951737701100E0E172 /* PBXTargetDependency */,
+				858717971737701100E0E172 /* PBXTargetDependency */,
 			);
 			name = DemoApp;
 			productName = DemoApp;
@@ -1773,20 +1773,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8515DD5F172A1D6300C84CF2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8515DD4E172A16D300C84CF2 /* Resource Bundle */;
-			targetProxy = 8515DD5E172A1D6300C84CF2 /* PBXContainerItemProxy */;
-		};
 		8515DD76172A1F5600C84CF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "facebook-ios-sdk";
 			targetProxy = 8515DD75172A1F5600C84CF2 /* PBXContainerItemProxy */;
 		};
-		8515DDFD172A229100C84CF2 /* PBXTargetDependency */ = {
+		858717951737701100E0E172 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8515DD4E172A16D300C84CF2 /* Resource Bundle */;
+			targetProxy = 858717941737701100E0E172 /* PBXContainerItemProxy */;
+		};
+		858717971737701100E0E172 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8515DD67172A1EDB00C84CF2 /* Static Library */;
-			targetProxy = 8515DDFC172A229100C84CF2 /* PBXContainerItemProxy */;
+			targetProxy = 858717961737701100E0E172 /* PBXContainerItemProxy */;
 		};
 		85F4D228172B3FFE00D7EEC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
